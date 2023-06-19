@@ -1,0 +1,732 @@
+[
+  {
+    "id": "1: Data Type Conversion (Easy)",
+    "description": "**Q1**: Define a function with two numerical strings to be the input arguments. The output is the summation of the numerical values of the input strings. For example, if the input strings are '3.5' and '2.7', then the output is 6.2, as a floating point number.",
+    "problem_name": "convert_datatype",
+    "test_cases": [
+      "a = '3.45'; b = '4.23'",
+      "a = '2.1'; b = '1.2'",
+      "a = '0.0'; b = '0.0'"
+    ],
+    "expected_output": [
+      "7.68",
+      "3.3",
+      "0"
+    ],
+    "starting_code": "convert_datatype <- function(a, b) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "2: Palindrome (Easy)",
+    "description": "**Q2**: Write a function to determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. For example, 121 is a palindrome so the output is True, 10 is not a palindrome so the output is False.",
+    "problem_name": "palindrome",
+    "test_cases": [
+      "num = 12",
+      "num = 535",
+      "num = -26000",
+      "num = 234321",
+      "num = 1"
+    ],
+    "expected_output": [
+      "FALSE",
+      "TRUE",
+      "FALSE",
+      "TRUE",
+      "TRUE"
+    ],
+    "starting_code": "palindrome <- function(num) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "3: Seven & Five (Easy)",
+    "description": "**Q3**: Write a function with a given argument n to return a vector containing all positive integers no larger than n, and these integers can be divided by 7 but cannot be divided by 5. For example, if n = 50, then the returned vector is c(7, 14, 21, 28, 42, 49).",
+    "problem_name": "seven_five",
+    "test_cases": [
+      "n = 14",
+      "n = 50",
+      "n = 120",
+      "n = 150"
+    ],
+    "expected_output": [
+      "c(7, 14)",
+      "c(7, 14, 21, 28, 42, 49)",
+      "c(7, 14, 21, 28, 42, 49, 56, 63, 77, 84, 91, 98, 112, 119)",
+      "c(7, 14, 21, 28, 42, 49, 56, 63, 77, 84, 91, 98, 112, 119, 126, 133, 147)"
+    ],
+    "starting_code": "seven_five <- function(n) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "4: Prime Number (Easy)",
+    "description": "**Q4**: Write a function to determine if a given positive integer n is a prime number. For example, 37 is a prime number so the output is TRUE, 10 is not so the output is FALSE.",
+    "problem_name": "prime",
+    "test_cases": [
+      "n = 5",
+      "n = 6",
+      "n = 11",
+      "n = 64",
+      "n = 97",
+      "n = 167"
+    ],
+    "expected_output": [
+      "TRUE",
+      "FALSE",
+      "FALSE",
+      "FALSE",
+      "TRUE",
+      "TRUE"
+    ],
+    "starting_code": "prime <- function(n) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "5: Robot (Easy)",
+    "description": "**Q5**: A robot starts to move from the origin (0, 0) on a 2D plane. Given a squence of moves, in terms of strings \"L\" for left, \"R\" for right, \"U\" for up, and \"D\" for down, write a function to tell if the robot returns to the origin (0, 0) after this sequence of moves. The output of the function is a boolean value.",
+    "problem_name": "robot",
+    "test_cases": [
+      "moves = 'UD'",
+      "moves = 'LL'",
+      "moves = 'LDRLUU'",
+      "moves = 'LLDUUUDDRLRR'",
+      "moves = 'LRLR'"
+    ],
+    "expected_output": [
+      "TRUE",
+      "FALSE",
+      "FALSE",
+      "TRUE",
+      "TRUE"
+    ],
+    "starting_code": "robot <- function(moves) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "6: Remove All Instances (Easy)",
+    "description": "**Q6**: Given a vector of numbers as the first input argument, write a function to remove all items in the vector that have the same value as the second input argument. For example, if the first argument is c(1, 3, 2, 2, 4, 2, 5) and the second argument is given as 2, then the output is c(1, 3, 4, 5), with all 2s removed.",
+    "problem_name": "remove_all",
+    "test_cases": [
+      "vec = c(0, 1, 2, 3, 2, 5); target = 2",
+      "vec = c(2, 3, 5, 6, 8, 3, 4, 3, 3, 4, 5); target = 3",
+      "vec = c(0, 1, 2, 3); target = 4",
+      "vec = c(8, 7, 6, 5, 5, 4, 3, 3, 2); target = 5"
+    ],
+    "expected_output": [
+      "c(0, 1, 3, 5)",
+      "c(2, 5, 6, 8, 4, 4, 5)",
+      "c(0, 1, 2, 3)",
+      "c(8, 7, 6, 4, 3, 3, 2)"
+    ],
+    "starting_code": "remove_all <- function(vec, target) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "7: Right Position (Easy)",
+    "description": "**Q7**: Given two equal length vectors of unique numbers, write a function to return the number of items in these two vectors that have the same values and are at the same positions. For example, if these two vectors are c(1, 2, 3, 5) and c(2, 1, 3, 4), then the output is 1 because the same value 3 appears at the same position 3 of both vectors.",
+    "problem_name": "right_position",
+    "test_cases": [
+      "vec_1 = c(1, 2, 3, 5); vec_2 = c(2, 1, 3, 4)",
+      "vec_1 = c(1, 2, 3, 5); vec_2 = c(5, 2, 3, 1)",
+      "vec_1 = c(1, 2, 3, 5); vec_2 = c(1, 2, 3, 4)",
+      "vec_1 = c(1, 3); vec_2 = c(1, 2)",
+      "vec_1 = c(1, 2, 3, 5); vec_2 = c(5, 3, 1, 2)"
+    ],
+    "expected_output": [
+      "1",
+      "2",
+      "3",
+      "1",
+      "0"
+    ],
+    "starting_code": "right_position <- function(vec_1, vec_2) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "8: Wrong Position (Easy)",
+    "description": "**Q8**: Given two equal length vectors of unique numbers, write a function to return the number of items in these two vectors that have the same values but are at different positions. For example, if these two vectors are c(1, 2, 3, 5)  and c(2, 1, 3, 4), then the output is 2 because the same values 1 and 2 appear at different positions.",
+    "problem_name": "wrong_position",
+    "test_cases": [
+      "vec_1 = c(1, 2, 3, 5); vec_2 = c(2, 1, 3, 4)",
+      "vec_1 = c(1, 2, 3, 5); vec_2 = c(5, 2, 3, 1)",
+      "vec_1 = c(1, 2, 3, 5); vec_2 = c(1, 2, 3, 4)",
+      "vec_1 = c(1, 3); vec_2 = c(1, 2)",
+      "vec_1 = c(1, 2, 3, 5); vec_2 = c(5, 3, 1, 2)"
+    ],
+    "expected_output": [
+      "2",
+      "2",
+      "0",
+      "0",
+      "4"
+    ],
+    "starting_code": "wrong_position <- function(vec_1, vec_2) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "9: Time Conversion (Easy)",
+    "description": "**Q9**: Create a function to transform the time data as a string of \"XX:XX:XXam\" or \"XX:XX:XXpm\" to the number of seconds counted from 12:00am. For example, the input of \"10:35:29am\" gives an output of 38129; the input of \"06:21:33pm\" gives an output of 66093.",
+    "problem_name": "time_conversion",
+    "test_cases": [
+      "time_str = '10:35:29am'",
+      "time_str = '06:21:33pm'",
+      "time_str = '03:11:12am'",
+      "time_str = '09:45:01pm'"
+    ],
+    "expected_output": [
+      "38129",
+      "66093",
+      "11472",
+      "78301"
+    ],
+    "starting_code": "time_conversion <- function(time_str) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "10: Reverse Digits (Easy)",
+    "description": "**Q10**: Reverse the digits of an integer. For example, if the input is 123, then the output is 321; if the input is -456, then the output is -654.",
+    "problem_name": "reverse_digits",
+    "test_cases": [
+      "num = 123",
+      "num = -456",
+      "num = 392",
+      "num = -14567",
+      "num = -2",
+      "num = 1"
+    ],
+    "expected_output": [
+      "321",
+      "-654",
+      "293",
+      "-76541",
+      "-2",
+      "1"
+    ],
+    "starting_code": "reverse_digits <- function(num) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "11: Unique Values (Easy)",
+    "description": "**Q11**: Create a function to remove all duplicates in a list, so that the output is a list containing the unique values of the original list. For example, if the input list is list(2, 3, 5, 2, 3, 4, 7), then the output must be list(2, 3, 5, 4, 7).",
+    "problem_name": "unique_values",
+    "test_cases": [
+      "a_list = list(2, 3, 5, 2, 3, 4, 7)",
+      "a_list = list(3.5, '4', '4', TRUE, FALSE, FALSE)",
+      "a_list = list(1.2, 3.5, 3.5, 2.4, 3.5, TRUE, FALSE, 0.01, 3.5, FALSE)"
+    ],
+    "expected_output": [
+      "list(2, 3, 5, 4, 7)",
+      "list(3.5, '4', TRUE, FALSE)",
+      "list(1.2, 3.5, 2.4, TRUE, FALSE, 0.01)"
+    ],
+    "starting_code": "unique_values <- function(a_list) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "12: Last Word (Easy)",
+    "description": "**Q12**: Create a function to return the length of the last word in a string. For example, if the input is \"R is a wonderful programming language\", then the output is 8, the length of the last word \"language\".",
+    "problem_name": "last_word",
+    "test_cases": [
+      "text = 'R is a wonderful programming language'",
+      "text = 'Take a sad song and make it better'",
+      "text = 'We are the champions my friend'",
+      "text = 'Manners maketh man'",
+      "text = 'All models are wrong but some are useful'",
+      "text = 'Python is the second best language for anything'"
+    ],
+    "expected_output": [
+      "8",
+      "6",
+      "6",
+      "3",
+      "6",
+      "8"
+    ],
+    "starting_code": "last_word <- function(text) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "13: Grade (Easy)",
+    "description": "**Q13**: Create a function to convert a vector of scores to grades. Grade \"A\" accounts for scores no lower than 90; grade \"B\" accounts for scores between 80 to 89; and grade \"C\" accounts for scores between 70 and 79; scores lower than 70 are recorded as \"D\". For example, if the input is c(85.5, 92, 45, 74, 79), then the output is c(\"B\", \"A\", \"D\", \"C\", \"C\").",
+    "problem_name": "grade",
+    "test_cases": [
+      "vec = c(85.5, 92, 45, 74, 79)",
+      "vec = c(25, 26, 55, 70, 80, 99)",
+      "vec = c(100, 95, 85)"
+    ],
+    "expected_output": [
+      "c('B', 'A', 'D', 'C', 'C')",
+      "c('D', 'D', 'D', 'C', 'B', 'A')",
+      "c('A', 'A', 'B')"
+    ],
+    "starting_code": "grade <- function(vec) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "14: Bubble Card (Easy)",
+    "description": "**Q14**: Create a function to grade bubble cards. The first input argument is vector of answers to be graded, and the second input argument is a vector of correct answers. The function compares these two lists, and returns the proportion of answers to be correct. For example, if the inputs are c(\"A\", \"C\", \"B\", \"D\", \"A\", \"D\") and c(\"A\", \"B\", \"C\", \"D\", \"D\", \"D\"), then the output is 0.5 because half of the values are the same in these two vectors.",
+    "problem_name": "bubble_card",
+    "test_cases": [
+      "response = c('A', 'C', 'B', 'D', 'A', 'D'); answer = c('A', 'B', 'C', 'D', 'D', 'D')",
+      "response = c('A', 'B', 'C', 'D', 'D', 'D'); answer = c('A', 'B', 'C', 'D', 'D', 'D')",
+      "response = c('C', 'B', 'B', 'C', 'B', 'D'); answer = c('C', 'A', 'B', 'D', 'B', 'D')",
+      "response = c('C', 'B', 'A'); answer = c('A', 'C', 'B')"
+    ],
+    "expected_output": [
+      "0.5",
+      "1",
+      "0.6666666666666666",
+      "0"
+    ],
+    "starting_code": "bubble_card <- function(response, answer) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "15: Squares & Cubes (Easy)",
+    "description": "**Q15**: For a sequence of numbers in a vector, create a new vector containing the squares of all non-negative numbers, and cubes of all negative numbers. For example, if the input is c(1, 2, 3, -4, -5, 6), then the output is c(1, 4, 9, -64, -125, 36).",
+    "problem_name": "squares_and_cubes",
+    "test_cases": [
+      "vec = c(1, 2, 3, -4, -5, 6)",
+      "vec = c(-2.5, 1.1, 3.0, -0.3, 0.5)"
+    ],
+    "expected_output": [
+      "c(1, 4, 9, -64, -125, 36)",
+      "c(-15.625, 1.21, 9, -0.027, 0.25)"
+    ],
+    "starting_code": "squares_and_cubes <- function(vec) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "16: Move Zeros (Easy)",
+    "description": "**Q16**: Given a vector of numbers as the input argument, write a function to move all zeros to the end of the vector, while the order of the other numbers remain the same. For example, if the input is c(0, 1, 0, 3, 12), then the output is c(1, 3, 12, 0, 0).",
+    "problem_name": "move_zeros",
+    "test_cases": [
+      "vec = c(0, 1, 0, 3, 12)",
+      "vec = c(1, 0, 0, 2.5, 3, 0, 1)",
+      "vec = c(-4, -2, 1, 0, 0, 2, 0)",
+      "vec = c(2, 3, 5)"
+    ],
+    "expected_output": [
+      "c(1, 3, 12, 0, 0)",
+      "c(1, 2.5, 3, 1, 0, 0, 0)",
+      "c(-4, -2, 1, 2, 0, 0, 0)",
+      "c(2, 3, 5)"
+    ],
+    "starting_code": "move_zeros <- function(vec) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "17: Merge Vectors (Easy)",
+    "description": "**Q17**: Given two vectors of sorted numbers as the input arguments, write a function to merge these two vectors as one vector, with all numbers sorted. For example, if the inputs are c(1, 2, 4) and c(1, 3, 4), then the output is c(1, 1, 2, 3, 4, 4).",
+    "problem_name": "merge_vectors",
+    "test_cases": [
+      "vec_1 = c(1, 2, 4); vec_2 = c(1, 3, 4)",
+      "vec_1 = c(0, 1, 1, 2, 5, 6); vec_2 = c(1, 2, 3)",
+      "vec_1 = c(-4, -2, 0, 0, 1, 2); vec_2 = c(-1, 0, 2, 3, 4, 5)"
+    ],
+    "expected_output": [
+      "c(1, 1, 2, 3, 4, 4)",
+      "c(0, 1, 1, 1, 2, 2, 3, 5, 6)",
+      "c(-4, -2, -1, 0, 0, 0, 1, 2, 2, 3, 4, 5)"
+    ],
+    "starting_code": "merge_vectors <- function(vec_1, vec_2) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "18: Prime Vector (Medium)",
+    "description": "**Q18**: Given a positive integer n, write a function to return a vector of prime numbers that are no larger than n. For example, if n = 20, then the returned vector is c(2, 3, 5, 7, 11, 13, 17, 19). Hint: Define a helper function first.",
+    "problem_name": "prime_vector",
+    "test_cases": [
+      "n = 1",
+      "n = 2",
+      "n = 3",
+      "n = 10",
+      "n = 20",
+      "n = 30",
+      "n = 40",
+      "n = 60",
+      "n = 100"
+    ],
+    "expected_output": [
+      "c()",
+      "c(2)",
+      "c(2, 3)",
+      "c(2, 3, 5, 7)",
+      "c(2, 3, 5, 7, 11, 13, 17, 19)",
+      "c(2, 3, 5, 7, 11, 13, 17, 19, 23, 29)",
+      "c(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37)",
+      "c(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59)",
+      "c(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97)"
+    ],
+    "starting_code": "prime_vector <- function(n) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "19: Minimum Number Index (Medium)",
+    "description": "**Q19**: Given a vector of unique numbers, write a function to return the position index of the smallest number. For example, if the given vector is c(3, 1, 5, 0, 2, 6), then the returned index is 4, because the smallest number 0 appears at position 4.",
+    "problem_name": "min_index",
+    "test_cases": [
+      "vec = c(0, 1, 3, 2, 5)",
+      "vec = c(3, 2, 5, 1, 4, 0)",
+      "vec = c(1, 2, 0, 3, 5)",
+      "vec = c(2, 1, 5, 6, 7, 3)",
+      "vec = c(3, 2, 1, 5, 7)"
+    ],
+    "expected_output": [
+      "1",
+      "6",
+      "3",
+      "2",
+      "3"
+    ],
+    "starting_code": "min_index <- function(vec) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "20: K Smallest (Medium)",
+    "description": "**Q20**: Given a vector of numbers as the first input argument, and an integer k as the second argument, write a function that returns a vector of the k smallest numbers of the vector. Items in the returned vector are ranked from the smallest to the largest. For example, if the vector is c(0, 1, 2, 3, 2, 5), and the integer is k = 3, then the returned vector is c(0, 1, 2). If k is larger than the length of the vector, then return the whole vector.",
+    "problem_name": "k_smallest",
+    "test_cases": [
+      "vec = c(0, 1, 2, 3, 2, 5); k = 3",
+      "vec = c(0, 1, 2, 3, 2, 5); k = 1",
+      "vec = c(0, 1, 2, 3, 2, 5); k = 8",
+      "vec = c(8, 7, 6, 5, 5, 4, 3, 3, 2); k = 5",
+      "vec = c(8, 7, 6, 5, 5, 4, 3, 3, 2); k = 3",
+      "vec = c(1); k = 1",
+      "vec = c(1); k = 5",
+      "vec = c(1, 2); k = 0",
+      "vec = c(); k = 2"
+    ],
+    "expected_output": [
+      "c(0, 1, 2)",
+      "c(0)",
+      "c(0, 1, 2, 2, 3, 5)",
+      "c(2, 3, 3, 4, 5)",
+      "c(2, 3, 3)",
+      "c(1)",
+      "c(1)",
+      "c()",
+      "c()"
+    ],
+    "starting_code": "k_smallest <- function(vec, k) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "21: Fibonacci (Medium)",
+    "description": "**Q21**: Write a function to find the nth number in the Fibonacci Sequence, In the Fibonacci Sequence, the next number is the sum of the two numbers before it, i.e. 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ... For example, if n = 1, then the output is 0; if n = 2 or n = 3, then the output is 1; if n = 4, then the output is 2; if n = 5, then the output is 3.",
+    "problem_name": "fibonacci",
+    "test_cases": [
+      "n = 1",
+      "n = 2",
+      "n = 3",
+      "n = 4",
+      "n = 5",
+      "n = 16",
+      "n = 21",
+      "n = 51",
+      "n = 81",
+      "n = 101",
+      "n = 201"
+    ],
+    "expected_output": [
+      "0",
+      "1",
+      "1",
+      "2",
+      "3",
+      "610",
+      "6765",
+      "12586269025",
+      "23416728348467685",
+      "354224848179261915075",
+      "280571172992510140037611932413038677189525"
+    ],
+    "starting_code": "fibonacci <- function(n) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "22: Longest Word (Medium)",
+    "description": "**Q22**: Create a function with the input argument to be a string. The output is the longest word in the string. For example, the input is a string \"R is the best programming language\", then the output is the string \"programming\". If there are two or more words with the same maximum length, then return the first one.",
+    "problem_name": "longest_word",
+    "test_cases": [
+      "sent = 'R is the best programming language'",
+      "sent = 'Take a sad song and make it better'",
+      "sent = 'We are the champions my friend'",
+      "sent = 'Manners maketh man'",
+      "sent = 'All models are wrong but some are useful'",
+      "sent = 'Shiny is the best web framework ever created'"
+    ],
+    "expected_output": [
+      "programming",
+      "better",
+      "champions",
+      "Manners",
+      "models",
+      "framework"
+    ],
+    "starting_code": "longest_word <- function(sent) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "23: Value Counts (Medium)",
+    "description": "**Q23**: Create a function to present the unique values in a given list and the number of their appearances. The output of the function is another list where the tags are the unique values, and the associated values are the number of their appearances. For example, if the inputs are list(\"A\", \"C\", \"B\", \"D\", \"A\", \"D\") then the output is list(\"A\" = 2, \"C\" = 1, \"B\" = 1, \"D\" = 2). Note: Named elements cannot start with a number, so any numbers must be enclosed by backticks (i.e. 2 becomes `2` - use as.character instead of paste0 to accomplish this, because R assumes the additional backticks are part of the new variable name.)",
+    "problem_name": "value_counts",
+    "test_cases": [
+      "a_list = list('A', 'C', 'B', 'D', 'A', 'D')",
+      "a_list = list(1, 2, 2, 5, 3, 1, 2, 5, 4, 2, 4, 8, '1', '2', '1')",
+      "a_list = list(1.2, 3.5, '2.4', 'B', 'B', 1.2, 1.2, 'B', 3.5)"
+    ],
+    "expected_output": [
+      "list('A' = 2, 'C' = 1, 'B' = 1, 'D' = 2)",
+      "list(`1` = 2, `2` = 4, `3` = 1, `4` = 2, `5` = 2, `8` = 1, '1' = 2, '2' = 1)",
+      "list(`1.2` = 3, `3.5` = 2, '2.4' = 1, 'B' = 3)"
+    ],
+    "starting_code": "value_counts <- function(a_list) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "24: Digit Sum (Medium)",
+    "description": "**Q24**: Given positive integers n and m as input arguments, write a function to select all positive integers that are no larger than n and the summations of all digits are the same as m. Return these selected integers as a vector. For example, if n = 30 and m = 5, the returned output is c(5, 14, 23), if n = 50 and m = 9, then returned output is c(9, 18, 27, 36, 45).",
+    "problem_name": "digit_sum",
+    "test_cases": [
+      "n = 30; m = 5",
+      "n = 50; m = 9",
+      "n = 100; m = 12",
+      "n = 200; m = 8"
+    ],
+    "expected_output": [
+      "c(5, 14, 23)",
+      "c(9, 18, 27, 36, 45)",
+      "c(39, 48, 57, 66, 75, 84, 93)",
+      "c(8, 17, 26, 35, 44, 53, 62, 71, 80, 107, 116, 125, 134, 143, 152, 161, 170)"
+    ],
+    "starting_code": "digit_sum <- function(n, m) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "25: One Appearance (Medium)",
+    "description": "**Q25**: Given a vector of numbers as the input argument, write a function to return a vector of numbers that only appear once in the vector. For example, if the input is c(1, 2, 1, 4, 3, 2, 0), then the output is c(4, 3, 0); if the input is c(1.5, 2, 2.0, 3.5, 1.5, 2), then the output is c(3.5).",
+    "problem_name": "one_appearance",
+    "test_cases": [
+      "vec = c(1, 2, 1, 4, 3, 2, 0)",
+      "vec = c(1.5, 2, 2.0, 3.5, 1.5, 2)",
+      "vec = c(2.5, 3, 3.0, 2.5, 2.5)"
+    ],
+    "expected_output": [
+      "c(4, 3, 0)",
+      "c(3.5)",
+      "c()"
+    ],
+    "starting_code": "one_appearance <- function(vec) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "26: Monotone Trend (Medium)",
+    "description": "**Q26**: An array is monotonic if it is either monotone increasing or monotone decreasing. A vector a is monotone increasing if for all i <= j, a[i] <= a[j]. A vector a is monotone decreasing if for all i <= j, a[i] >= a[j]. Write a function to return TRUE if and only if the given input vector is monotonic. For example, if the input is c(1, 2, 2, 3), then the output is TRUE. If the input is c(1, 3, 2), then the output is FALSE.",
+    "problem_name": "monotone",
+    "test_cases": [
+      "vec = c(1, 2, 2, 3)",
+      "vec = c(6, 5, 4, 4)",
+      "vec = c(2, 3, 2, 4, 5)",
+      "vec = c(1, 3, 2)",
+      "vec = c(1, 2, 4, 5)",
+      "vec = c(1, 1, 1)",
+      "vec = c(1, 1, 1, 2, 3, 7)",
+      "vec = c(1, 2, 2, 2, 3, 3, 3, 2)"
+    ],
+    "expected_output": [
+      "TRUE",
+      "TRUE",
+      "FALSE",
+      "FALSE",
+      "TRUE",
+      "TRUE",
+      "TRUE",
+      "FALSE"
+    ],
+    "starting_code": "monotone <- function(vec) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "27: Warmer Temperature (Medium)",
+    "description": "**Q27**: Given a vector of daily temperatures T (in Farenheit), return a vector such that, for each day in the input, tells you how many days you would have to wait until a warmer temperature. If there is no future day for which this is possible, put 0 instead. For example, given the vector of temperatures T = c(73, 74, 75, 71, 69, 72, 76, 73), your output should be c(1, 1, 4, 2, 1, 1, 0, 0).",
+    "problem_name": "warmer_temp",
+    "test_cases": [
+      "T = c(73, 74, 75, 71, 69, 72, 76, 73)",
+      "T = c(73, 74, 73, 71, 69, 75, 76, 73)",
+      "T = c(72, 71, 75, 78, 72, 73, 70, 69)",
+      "T = c(72, 75, 79, 71, 73, 69)"
+    ],
+    "expected_output": [
+      "c(1, 1, 4, 2, 1, 1, 0, 0)",
+      "c(1, 4, 3, 2, 1, 1, 0, 0)",
+      "c(2, 1, 1, 0, 1, 0, 0, 0)",
+      "c(1, 1, 0, 1, 0, 0)"
+    ],
+    "starting_code": "warmer_temp <- function(T) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "28: Common Prefix (Hard)",
+    "description": "**Q28**: Write a function to find the longest common prefix string amongst a vector of strings. For example, the input argument is c(\"flower\", \"flow\", \"flight\"), the output is \"fl\". If there is no common prefix among the input strings, the output is an empty string.",
+    "problem_name": "common_prefix",
+    "test_cases": [
+      "words = c('flower', 'flow', 'flight')",
+      "words = c('coldplay', 'cold storage', 'cold', 'cold war')",
+      "words = c('dog', 'racecar', 'car')",
+      "words = c('flower', 'flow', 'flight', 'inflow')"
+    ],
+    "expected_output": [
+      "'fl'",
+      "'cold'",
+      "''",
+      "''"
+    ],
+    "starting_code": "common_prefix <- function(words) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "29: Sort (Hard)",
+    "description": "**Q29**: Write a function to sort a vector from the smallest value to the largest value. For example, if the input is c(3.5, 2.1, 2.1, 3.4, 2.8, 1.2), the output is c(1.2, 2.1, 2.1, 2.8, 3.4, 3.5). As a practice, do not use the build-in sort() function.",
+    "problem_name": "bubble_sort",
+    "test_cases": [
+      "vec = c(3.5, 2.1, 2.2, 1.6, 0.8, 3.9, 2.5)",
+      "vec = c(3.5, 2.1, 2.1, 3.4, 2.8, 1.2)",
+      "vec = c(3.5, 2.1, 2.1, 3.4, 2.8, 3.4, 1.2)"
+    ],
+    "expected_output": [
+      "c(0.8, 1.6, 2.1, 2.2, 2.5, 3.5, 3.9)",
+      "c(1.2, 2.1, 2.1, 2.8, 3.4, 3.5)",
+      "c(1.2, 2.1, 2.1, 2.8, 3.4, 3.4, 3.5)"
+    ],
+    "starting_code": "bubble_sort <- function(vec) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "30: Pascal's Triangle (Hard)",
+    "description": "**Q30**: Write a function with one argument n, to return the nth row of the Pascal's triangle. For example, if n = 1, the output is c(1); if n = 2, then the output is c(1, 1); if n = 3, then the output is c(1, 2, 1); if n = 4, then the output is c(1, 3, 3, 1).",
+    "problem_name": "pascal_triangle",
+    "test_cases": [
+      "n = 1",
+      "n = 2",
+      "n = 3",
+      "n = 4",
+      "n = 5",
+      "n = 8",
+      "n = 10",
+      "n = 11"
+    ],
+    "expected_output": [
+      "c(1)",
+      "c(1, 1)",
+      "c(1, 2, 1)",
+      "c(1, 3, 3, 1)",
+      "c(1, 4, 6, 4, 1)",
+      "c(1, 7, 21, 35, 35, 21, 7, 1)",
+      "c(1, 9, 36, 84, 126, 126, 84, 36, 9, 1)",
+      "c(1, 10, 45, 120, 210, 252, 210, 120, 45, 10, 1)"
+    ],
+    "starting_code": "pascal_triangle <- function(n) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "31: Stairs (Hard)",
+    "description": "**Q31**: There are n stairs on a staircase and a person standing at the bottom wants to reach the top of the stairs. This person can climb either 1 stair or 2 stairs at a time. Write a function with the input argument n to count the number of ways, the person can reach the top. For example, if n = 2, this person has 2 ways to get to the top; if n = 3, this person has 3 ways to get to the top; if n = 4, this person has 5 ways to get to the top.",
+    "problem_name": "stairs",
+    "test_cases": [
+      "n = 1",
+      "n = 2",
+      "n = 3",
+      "n = 4",
+      "n = 5",
+      "n = 8",
+      "n = 10",
+      "n = 11",
+      "n = 14"
+    ],
+    "expected_output": [
+      "1",
+      "2",
+      "3",
+      "5",
+      "8",
+      "34",
+      "89",
+      "144",
+      "610"
+    ],
+    "starting_code": "stairs <- function(n) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "32: Longest Substring (Hard)",
+    "description": "**Q32**: Given two strings as the input arguments, write a function to return the longest substring shared by these two input strings. For example, if the inputs are \"cdbabcde\" and \"babcffg\", then the output is \"abc\"; if the inputs are \"This is an apple\" and \"Check the app store\", then the output is \"app\".",
+    "problem_name": "longest_substring",
+    "test_cases": [
+      "str_1 = 'cdeabcde'; str_2 = 'babcffg'",
+      "str_1 = 'This is an apple'; str_2 = 'Check the app store'",
+      "str_1 = 'R'; str_2 = 'Python'"
+    ],
+    "expected_output": [
+      "'abc'",
+      "'app'",
+      "''"
+    ],
+    "starting_code": "longest_substring <- function(str_1, str_2) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "33: Trading Decisions (Hard)",
+    "description": "**Q33**: Given a numeric vector representing the prediction of stock prices in a number of days, design a function to find the maximum profit. For example, if the input vector is c(7, 1, 5, 3, 6, 4) then the profit is 4 + 3 = 7, because you can buy the stock on day 2 (price = 1) and sell it on day 3 (price = 5) so the profit is 4, then you can buy on day 4 (price = 3) and sell it on day 5 (price = 6) so the profit is 3. Note that you can make the buy and sell transcations in the same day, but you cannot buy the stock again before selling it, so if the given input list is [1, 2, 3, 4, 5] then the output is 5 - 1 = 4, or (2 - 1) + (3 - 2) + (4 - 3) + (5 - 4) = 4.",
+    "problem_name": "trade",
+    "test_cases": [
+      "vec = c(7, 1, 5, 3, 6, 4)",
+      "vec = c(1, 2, 3, 4, 5)",
+      "vec = c(7, 6, 4, 3, 1)",
+      "vec = c(4, 2, 1, 2, 3, 9, 0, 2)",
+      "vec = c(1, 2, 3, 2, 4, 5, 0, 1)"
+    ],
+    "expected_output": [
+      "7",
+      "4",
+      "0",
+      "10",
+      "6"
+    ],
+    "starting_code": "trade <- function(vec) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "34: Lemonade Stand (Hard)",
+    "description": "**Q34**: At a lemonade stand, each lemonade costs $5. Customers are standing in a queue to buy from you, and order one at a time. Each customer will only buy one lemonade and pay with either a $5, $10, or $20 bill, and these payments are kept in a numeric vector as the input argument. You must provide the correct change to each customer, so that the net transaction is that the customer pays $5. Note that you don't have any change in hand at first. Return TRUE if and only if you can provide every customer with the correct change, otherwise return FALSE. For example, if the input is c(5, 5, 5, 10, 20), then the output is TRUE, because we collected three $5 bills to pay back the subsequent customers. If the input is c(10, 10), then the output is FALSE, because there is no way to pay back the customers.",
+    "problem_name": "lemonade_stand",
+    "test_cases": [
+      "vec = c(5, 5, 5, 10, 20)",
+      "vec = c(10, 10)",
+      "vec = c(5, 10, 20, 5, 5, 10)",
+      "vec = c(5, 5, 10, 10, 5, 20)",
+      "vec = c(5, 5, 10, 10, 20)",
+      "vec = c(5, 10, 5, 10, 5, 20, 5, 10, 5, 5, 20)",
+      "vec = c(5, 10, 5, 10, 5, 20, 5, 20, 5, 5, 20)"
+    ],
+    "expected_output": [
+      "TRUE",
+      "FALSE",
+      "FALSE",
+      "TRUE",
+      "FALSE",
+      "TRUE",
+      "FALSE"
+    ],
+    "starting_code": "lemonade_stand <- function(vec) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "35: Flatten Lists (Hard)",
+    "description": "**Q35**: Given a nested list of lists, implement an iterator to flatten it. Each element is either an integer, or a list -- whose elements may also be integers or other lists. For example, if the input is list(list(1, 1), 2, list(1, 1)), then the output is list(1, 1, 2, 1, 1). If the input is list(1, list(4, list(6))), then the output is list(1, 4, 6).",
+    "problem_name": "flatten",
+    "test_cases": [
+      "nested_list = list(list(1, 1), 2, list(1, 1))",
+      "nested_list = list(1, list(4, list(6)))",
+      "nested_list = list(list(1), list(2, list(3), NULL), list(list(list(4))))"
+    ],
+    "expected_output": [
+      "list(1, 1, 2, 1, 1)",
+      "list(1, 4, 6)",
+      "list(1, 2, 3, NULL, 4)"
+    ],
+    "starting_code": "flatten <- function(nested_list) {\n  # Write your code here\n}"
+  },
+  {
+    "id": "36: Match Parentheses (Very Hard)",
+    "description": "**Q36**: Given a string containing different types of parentheses, write a function to check if the parentheses match. For example, if the input is \"(this is {a test})\", the output is TRUE; if the input is \"(this is {a test)}\", then the output is FALSE.",
+    "problem_name": "match_parentheses",
+    "test_cases": [
+      "p = '(this is {a test})'",
+      "p = '(this is {a test)}'",
+      "p = '(this is )a {test}'",
+      "p = '(this [is] a {test}'",
+      "p = '(this [is a {test})'",
+      "p = 'this (is {a }) test'",
+      "p = 'this [is {a}} test'",
+      "p = 'this is a test'",
+      "p = 'this )is a test'"
+    ],
+    "expected_output": [
+      "TRUE",
+      "FALSE",
+      "TRUE",
+      "FALSE",
+      "FALSE",
+      "TRUE",
+      "FALSE",
+      "TRUE",
+      "FALSE"
+    ],
+    "starting_code": "match_parentheses <- function(p) {\n  # Write your code here\n}"
+  }
+]
