@@ -13,7 +13,7 @@ question_bank <- as.data.frame(question_bank_read, stringsAsFactors = FALSE)
 ui <- fluidPage(
   theme = shinytheme("darkly"),
   tags$head(
-    tags$link(rel = "icon", type = "image/png", href = "./favicon.png"),
+    tags$link(rel = "icon", type = "image/png", href = "https://raw.githubusercontent.com/tsu2000/exbook_R/main/favicon.png"),
     tags$title("exeRcise book"),
     tags$style(
       HTML(
