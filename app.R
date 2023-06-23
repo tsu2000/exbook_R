@@ -4,7 +4,8 @@ library(shinyAce)
 library(jsonlite)
 
 # Read the question bank JSON data into R
-question_bank_read <- fromJSON("question_bank.json")
+github_json <- "https://raw.githubusercontent.com/tsu2000/exbook_R/main/question_bank.json"
+question_bank_read <- jsonlite::fromJSON(github_json)
 
 # Convert the JSON object to a data frame
 question_bank <- as.data.frame(question_bank_read, stringsAsFactors = FALSE)
@@ -14,7 +15,7 @@ ui <- fluidPage(
   theme = shinytheme("darkly"),
   tags$head(
     tags$link(rel = "icon", type = "image/png", href = "https://raw.githubusercontent.com/tsu2000/exbook_R/main/favicon.png"),
-    tags$title("exeRcise book"),
+    tags$title("exeRcise book TEST"),
     tags$style(
       HTML(
         "
