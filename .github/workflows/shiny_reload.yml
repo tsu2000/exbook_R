@@ -1,0 +1,34 @@
+name: Reload Shiny App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Check JSON diff
+        id: json_diff
+        run: |
+          # Store the old JSON file content
+          echo "::set-output name=old_json::$(cat question_bank.json)"
+
+          # Store the new JSON file content
+          echo "::set-output name=new_json::$(cat question_bank.json)"
+
+      - name: Refresh Shiny App
+        env:
+          SHINY_TOKEN: ${{ secrets.SHINY_TOKEN }}
+        run: |
+          # Compare the old and new JSON file content
+          if [ "${{ steps.json_diff.outputs.old_json }}" != "${{ steps.json_diff.outputs.new_json }}" ]; then
+            # Replace <app-url> with the URL of your Shiny app
+            # Include the Shiny token in the request headers
+            curl -X POST -H "Authorization: Bearer $SHINY_TOKEN" <https://tsu2000.shinyapps.io/exbook/>/__reload__/
+          fi
