@@ -17,12 +17,12 @@ jobs:
         id: json_diff
         run: |
           # Store the old JSON file content
-          echo "::set-output name=old_json::$(cat question_bank.json)"
+          echo "::set-output name=old_json::$(cat question_bank.json | jq -r '.questions')"
 
           # Store the new JSON file content
-          echo "::set-output name=new_json::$(cat question_bank.json)"
+          echo "::set-output name=new_json::$(cat question_bank.json | jq -r '.questions')"
 
-      - name: Refresh Shiny App
+      - name: Reload Shiny App
         env:
           SHINY_TOKEN: ${{ secrets.SHINY_TOKEN }}
         run: |
