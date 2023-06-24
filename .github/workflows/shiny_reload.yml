@@ -30,5 +30,5 @@ jobs:
           if [ "${{ steps.json_diff.outputs.old_json }}" != "${{ steps.json_diff.outputs.new_json }}" ]; then
             # Replace <app-url> with the URL of your Shiny app
             # Include the Shiny token in the request headers
-            curl -X POST -H "Authorization: Bearer $SHINY_TOKEN" <https://tsu2000.shinyapps.io/exbook/>/__reload__/
+            curl -X POST -H "Authorization: Bearer $SHINY_TOKEN" https://tsu2000.shinyapps.io/exbook/__reload__/
           fi
