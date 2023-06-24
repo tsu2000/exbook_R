@@ -43,10 +43,24 @@ ui <- fluidPage(
           border: 2px solid white;
           background-color: black;
           padding: 4px 6px;
-          margin-bottom: 10px;
           display: inline-block;
+          position: relative;
+          z-index: 1;
         }
-        
+
+        .github-link-container {
+          display: inline-block;
+          position: relative;
+        }
+
+        .github-link-container::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
         #sidebarPanel {
           height: 480px;
         }
@@ -69,18 +83,21 @@ ui <- fluidPage(
       fluidRow(
         column(
           width = 1,
-          tags$a(class = "github-link", href = "https://github.com/tsu2000/exbook_R", 
+          tags$div(
+            class = "github-link-container",
+            tags$a(class = "github-link", href = "https://github.com/tsu2000/exbook_R", 
                  target = "_blank", fa(name = "github", fill = "white", height = "20px", width = "20px")
                  )
+            )
         ),
         column(
-          width = 10, style = "padding-left: 25px",
+          width = 10, style = "padding-left: 30px",
           tags$a(class = "help-button", href = "https://chat.openai.com/auth/login", target = "_blank", "I need help with a problem!")
         )
       ),
       br(),
       markdown("**Made with:**"),
-      imageOutput("shiny_logo")
+      uiOutput("shiny_logo")
     ),
     mainPanel(
       # Problem description
@@ -129,11 +146,12 @@ ui <- fluidPage(
 # Define the server
 server <- function(input, output, session) {
   
-  output$shiny_logo <- renderImage({
-    list(src = "https://raw.githubusercontent.com/tsu2000/exbook_R/main/images/shiny.png",
-         alt = "Shiny Logo",
-         style = "width: 84.7px; height: 98.1px;")
-  }, deleteFile = FALSE) 
+  output$shiny_logo <- renderUI({
+    tags$img(src = "https://raw.githubusercontent.com/tsu2000/exbook_R/main/images/shiny.png", 
+             alt = "Shiny Logo",
+             style = "width: 84.7px; height: 98.1px;"
+            )
+  })
   
   observe({
     # Update the code editor with the starting code for the selected problem
