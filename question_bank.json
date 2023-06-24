@@ -68,7 +68,7 @@
     "expected_output": [
       "TRUE",
       "FALSE",
-      "FALSE",
+      "TRUE",
       "FALSE",
       "TRUE",
       "TRUE"
