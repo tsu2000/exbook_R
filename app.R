@@ -2,6 +2,7 @@ library(shiny)
 library(shinythemes)
 library(shinyAce)
 library(jsonlite)
+library(fontawesome)
 
 # Read the question bank JSON data into R
 github_json <- "https://raw.githubusercontent.com/tsu2000/exbook_R/main/question_bank.json"
@@ -14,8 +15,8 @@ question_bank <- as.data.frame(question_bank_read, stringsAsFactors = FALSE)
 ui <- fluidPage(
   theme = shinytheme("darkly"),
   tags$head(
-    tags$link(rel = "icon", type = "image/png", href = "https://raw.githubusercontent.com/tsu2000/exbook_R/main/favicon.png"),
-    tags$title("exeRcise book TEST"),
+    tags$link(rel = "icon", type = "image/png", href = "https://raw.githubusercontent.com/tsu2000/exbook_R/main/images/favicon.png"),
+    tags$title("exeRcise book"),
     tags$style(
       HTML(
         "
@@ -37,8 +38,17 @@ ui <- fluidPage(
           display: inline-block;
         }
         
+        .github-link {
+          border-radius: 5px;
+          border: 2px solid white;
+          background-color: black;
+          padding: 4px 6px;
+          margin-bottom: 10px;
+          display: inline-block;
+        }
+        
         #sidebarPanel {
-          height: 564px;
+          height: 480px;
         }
         
         "
@@ -56,9 +66,18 @@ ui <- fluidPage(
       tags$hr(style = "border-top: 2px solid #BBCBFF; margin-top: 10px; margin-bottom: 10px;"),
       markdown("**About this web application:**"),
       markdown("This is a simple web application to learn the basics of R programming through solving simple programming problems. Most problems are from the `exbook` Python [package](https://pypi.org/project/exbook/) from PyPI, which have been modified for R."),
-      br(),
-      tags$a(class = "help-button", href = "https://chat.openai.com/auth/login", target = "_blank", "I need help with a problem!"),
-      br(),
+      fluidRow(
+        column(
+          width = 1,
+          tags$a(class = "github-link", href = "https://github.com/tsu2000/exbook_R", 
+                 target = "_blank", fa(name = "github", fill = "white", height = "20px", width = "20px")
+                 )
+        ),
+        column(
+          width = 10, style = "padding-left: 25px",
+          tags$a(class = "help-button", href = "https://chat.openai.com/auth/login", target = "_blank", "I need help with a problem!")
+        )
+      ),
       br(),
       markdown("**Made with:**"),
       imageOutput("shiny_logo")
@@ -111,9 +130,9 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   
   output$shiny_logo <- renderImage({
-    list(src = "shiny.png",
+    list(src = "https://raw.githubusercontent.com/tsu2000/exbook_R/main/images/shiny.png",
          alt = "Shiny Logo",
-         style = "width: 95px; height: 100px;")
+         style = "width: 84.7px; height: 98.1px;")
   }, deleteFile = FALSE) 
   
   observe({
