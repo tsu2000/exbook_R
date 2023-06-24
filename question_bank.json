@@ -728,5 +728,21 @@
       "FALSE"
     ],
     "starting_code": "match_parentheses <- function(p) {\n  # Write your code here\n}"
+  },
+  {
+  "id": "37: String Reversal (Easy)",
+  "description": "**Q37**: Write a function that takes a string as input and returns the reverse of that string. For example, if the input string is 'hello', the function should return 'olleh'.",
+  "problem_name": "reverse_string",
+  "test_cases": [
+    "input = 'hello'",
+    "input = 'world'",
+    "input = '12345'"
+  ],
+  "expected_output": [
+    "'olleh'",
+    "'dlrow'",
+    "'54321'"
+  ],
+  "starting_code": "reverse_string <- function(input) {\n  # Write your code here\n}"
   }
 ]
