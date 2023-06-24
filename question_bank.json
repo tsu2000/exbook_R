@@ -728,21 +728,5 @@
       "FALSE"
     ],
     "starting_code": "match_parentheses <- function(p) {\n  # Write your code here\n}"
-  },
-  {
-  "id": "37: String Concatenation (Medium)",
-  "description": "**Q37**: Write a function that takes two strings as input arguments and returns their concatenation. For example, if the input strings are 'Hello' and 'World', then the output should be 'HelloWorld'.",
-  "problem_name": "string_concatenation",
-  "test_cases": [
-  "a = 'Hello'; b = 'World'",
-  "a = 'Open'; b = 'AI'",
-  "a = 'Chat'; b = 'GPT'"
-  ],
-  "expected_output": [
-  "HelloWorld",
-  "OpenAI",
-  "ChatGPT"
-  ],
-  "starting_code": "string_concatenation <- function(a, b) {\n # Write your code here\n}"
   }
 ]
